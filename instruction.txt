@@ -1,0 +1,66 @@
+sudo apt-get install git
+git config --global user.name "anikettle"
+git config --global user.email "aniket411@gmail.com"
+
+
+git clone "https://github.com/anikettle/git_hub_ubuntu"
+cd git_hub_ubuntu/
+
+// Make a file in any wya you want (eg. gedit, vim, etc.)
+// Can also make directories (using mkdir)
+
+//OPTION-
+gedit .gitignore
+	--> add the name of the file you don't want to upload (eg. log.txt, etc.)
+	    add a file in each line
+	    can also add a directory like, /dir1
+	    even (*.txt) and all also work
+	    
+
+git add <file_name>
+or
+git add .	(to add all the files)
+
+git status	(to check the status: red implies not added, if added then green)
+
+git commit -m "<your commit>"
+
+// Now you need to push
+
+git push --> then, anikettle --> <password>	(worked for me)
+
+// Not yet sure of branching
+
+git push -u origin master	(didn't work for me: not yet figured out the reason)
+
+git branch mybranch
+git checkout mybranch
+
+\\ Do the changes as before, then add, then commit
+
+git checkout master (or main: whatever was the original directory)
+	NOTE: the changes made in the branch is gone! as those changes are in the login branch
+
+git merge mybranch
+	enter some comments on merging (editor opens in the terminal itself)
+	NOTE: Now the branch files are visible
+
+git push	(should work)
+
+
+
+
+IF MAKING A REPO ON THE PC AND THEN WANT TO PUT IT ON A REPO
+
+git init
+git add readme.md
+git commit -m "inti commit"
+
+git remote add origin https://github.com/anikettle/git_hub_ubuntu.git
+git push -origin master
+
+
+
+
+
+	
